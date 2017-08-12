@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display the checkout completion page.
+ *
+ * Available variables:
+ * - order: The order that was completed.
+ * - message: A message to display to the user.
+ * - front_page: The URL of the front page.
+ *
+ * @ingroup themeable
+#}
+
+<p class="your-order-has-subited">{{ 'Your Order Has Ben Submited! Your order number is @number.'|t({'@number': order.id}) }}</p>
+
+{{ message }}
+
+<p class="front-page-link"><a href="{{ front_page }}"> <br />
+ {{ 'Return to the front page.'|t }}</a></p>
+
+
+<p>{{'Welcome!!!'}}</p>
+
+
+{% set the_image = item.content['#field_collection_item'].field_featurette_image %}
+<img src=".../drupal-enterprise.png" alt="{{ the_image.alt }}" title="{{ the_image.title }}">
+<p>{{"hi"}}</p>
+
+{% set the_image = item.content['#field_collection_item'].field_featurette_image %}
+<img src="drupal-enterprise.png" alt="{{ the_image.alt }}" title="{{ the_image.title }}">
+<p>{{"hi"}}</p>
